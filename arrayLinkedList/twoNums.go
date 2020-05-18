@@ -36,7 +36,9 @@ func twoSum(nums []int, target int) [2]int {
 
 /*
 思路2：两遍哈希法
-
+1.循环创建一个包含所有元素的hash表，key是元素，value是元素下标
+2.计算出目标值和元素的差值
+3.循环判断差值是否存在再hash表中，如果存在且此时的下标不等于当前遍历的下标（保证不是重复元素）
 */
 
 func twoSum1(nums []int, target int) [2]int {
@@ -47,7 +49,7 @@ func twoSum1(nums []int, target int) [2]int {
 	for i := 0; i < len(nums); i++ {
 		Temp[nums[i]] = i
 		/*
-		{2:0, 7:1, 11:2, 15:3}
+			{2:0, 7:1, 11:2, 15:3}
 		*/
 	}
 
@@ -67,9 +69,42 @@ func twoSum1(nums []int, target int) [2]int {
 
 }
 
+/*
+思路：一遍hash
+时间复杂度：O(n)
+我们只遍历了包含有 n 个元素的列表一次。在表中进行的每次查找只花费 O(1)O(1) 的时间。
+
+空间复杂度：O(n)
+所需的额外空间取决于哈希表中存储的元素数量，该表最多需要存储 n 个元素。
+*/
+
+func twoSum2(nums []int, target int) []int {
+	Temp := make(map[int]int)
+	//var resIndex [2]int
+	resIndex := make([]int, 2, 10)
+	for i := 0; i < len(nums); i++ {
+
+		// 计算差值
+		complement := target - nums[i]
+
+		// 判断差值是否存在hash中
+		// 如果存在则表示存在两数之和等于目标值
+		// 如果不存在则将差值添加到hash表中
+		index, ok := Temp[complement]
+		if ok {
+			resIndex[0] = i
+			resIndex[1] = index
+		} else {
+			Temp[nums[i]] = i
+		}
+
+	}
+	return resIndex
+}
+
 func main() {
 	var nums = []int{2, 7, 11, 15}
 	var target = 18
-	resIndex := twoSum1(nums, target)
+	resIndex := twoSum2(nums, target)
 	fmt.Println(resIndex)
 }
