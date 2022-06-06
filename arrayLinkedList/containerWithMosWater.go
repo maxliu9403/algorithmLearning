@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"math"
 )
 
 // 【盛最多的水】11题
@@ -19,40 +18,28 @@ import (
 思路1：枚举法
 计算出每种区域的面积，选择出最大值
 时间复杂度：O(n^2)
-
 */
 
-func maxArea1(height []int) float64 {
-	var maxValue float64
-	for i := 0; i < len(height)-1; i++ {
-		for j := i + 1; j < len(height); j++ {
-			area := int(math.Min(float64(height[i]), float64(height[j]))) * (j - i)
-			maxValue = math.Max(float64(area), maxValue)
-		}
-	}
-	return maxValue
-}
-
-// golang对于int/int64类型的数据，不提供直接的min和max操作
-func maxArea3(height []int) int {
+func maxArea(height []int) int {
 	var maxValue int
 	var resValue int
-	for i := 0; i < len(height)-1; i++ {
-		for j := 0; j < len(height); j++ {
 
+	for i := 0; i < len(height)-1; i++ {
+
+		for j := i + 1; j < len(height); j++ {
 			if height[i] < height[j] {
 				resValue = (j - i) * height[i]
 			} else {
 				resValue = (j - i) * height[j]
 			}
 
-			// 选择出最大值
-			if maxValue <= resValue {
-				maxValue = resValue
-			}
-			continue
-
 		}
+
+		// 选择最大值
+		if maxValue <= resValue {
+			maxValue = resValue
+		}
+
 	}
 	return maxValue
 
@@ -62,72 +49,42 @@ func maxArea3(height []int) int {
 思路2：夹逼法
 1.双指针
 2.初始指针分别放再0第一个元素和最后一个元素
-3.移动左边指针，如果此时的指向的左边元素的高小于上次的左边元素，
-跳过（因为此时的宽度变窄了，高度也变小了，那么自然面积变小了）
-
+3.移动左边指针，如果此时的指向的左边元素的高小于上次的左边元素，跳过（因为此时的宽度变窄了，高度也变小了，那么自然面积变小了）
 时间复杂度：O(N)
 */
 
-// 枚举法
+//思路2：夹逼法
 func maxArea2(height []int) int {
-	size := len(height)
-	left, right := 0, size-1
-	var maxValue int
+	left, right := 0, len(height)-1
+	var maxArea int
 
 	for left != right {
 		var resValue int
 		if height[left] < height[right] {
 			resValue = height[left] * (right - left)
+			// 此时left右移
 			left++
+
 		} else {
 			resValue = height[right] * (right - left)
+			// 此时right左移
 			right--
-		}
-		// 比较最大值
-		if maxValue >= resValue {
-			continue
-		} else {
-			maxValue = resValue
-		}
-	}
-	return maxValue
 
-}
-
-
-// 夹逼法
-func maxArea(nums []int) int {
-	left, right := 0, len(nums)-1
-	var maxValue int
-
-	for left != right {
-		var resValue int
-		if nums[left] < nums[right] {
-			resValue = nums[left] * (right - left)
-			// 右移动
-			left++
-		} else {
-			resValue = nums[right] * (right - left)
-			// 左移
-			right--
 		}
 
-		// 选择出最大值
-		if maxValue >= resValue {
-			continue
-		} else {
-			maxValue = resValue
+		// 选出最大值
+		if maxArea <= resValue {
+			maxArea = resValue
 		}
-		continue
 
 	}
-	return maxValue
+	return maxArea
 
 }
 
 func main() {
 	var height = []int{1, 8, 6, 2, 5, 4, 8, 3, 7}
-	maxValue := maxArea(height)
+	maxValue := maxArea2(height)
 	fmt.Println(maxValue)
 
 }

@@ -17,19 +17,19 @@ import "fmt"
 
 */
 
-func twoSum(nums []int, target int) [2]int {
+func twoSun(nums []int, target int) [2]int {
 	var resIndex [2]int
+
 	for i := 0; i < len(nums); i++ {
-		for j := i + 1; j < len(nums); j++ {
+
+		for j := i + 2; j < len(nums); j++ {
 			value := nums[i] + nums[j]
 			if value == target {
 				resIndex[0] = i
 				resIndex[1] = j
 			}
-			continue
 		}
 	}
-
 	return resIndex
 
 }
@@ -41,21 +41,15 @@ func twoSum(nums []int, target int) [2]int {
 3.循环判断差值是否存在再hash表中，如果存在且此时的下标不等于当前遍历的下标（保证不是重复元素）
 */
 
-func twoSum1(nums []int, target int) [2]int {
-
+func twoSum2(nums []int, target int) [2]int {
 	var resIndex [2]int
 	Temp := make(map[int]int)
-
 	for i := 0; i < len(nums); i++ {
 		Temp[nums[i]] = i
-		/*
-			{2:0, 7:1, 11:2, 15:3}
-		*/
 	}
 
 	for i := 0; i < len(nums); i++ {
 		complement := target - nums[i]
-
 		_, ok := Temp[complement]
 		// 数组中同一个元素不能使用两遍。
 		if ok && Temp[complement] != i {
@@ -63,8 +57,8 @@ func twoSum1(nums []int, target int) [2]int {
 			resIndex[1] = Temp[complement]
 
 		}
-
 	}
+
 	return resIndex
 
 }
