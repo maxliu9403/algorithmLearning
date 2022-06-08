@@ -4,4 +4,4 @@
 ### 动态规划
 题目 | 难度 |  max.liu | jay.lee
 -- |--|--|-- 
-[无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)| Hard| [go]() | [go]()
+[两数之和](https://leetcode.cn/problems/two-sum/)| Easy| [go]() | [go]()
