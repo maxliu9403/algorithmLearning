@@ -18,3 +18,14 @@ func TwoSum(nums []int, target int) []int {
 	}
 	return ans
 }
+
+func Method2(nums []int, target int) []int {
+	tmp := make(map[int]int)
+	for k, v := range nums {
+		if index, ok := tmp[target-v]; ok {
+			return []int{k, index}
+		}
+		tmp[v] = k
+	}
+	return nil
+}
