@@ -30,8 +30,8 @@ func RelativeSortArrayMethod1(arr1 []int, arr2 []int) []int {
 		if hasx && hasy {
 			return rankx < ranky
 		}
-		// 	arr1 := []int{2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19}
-		//	arr2 := []int{2, 1, 4, 3, 9, 6}
+		// 题目要求未在 arr2 中出现过的元素需要按照升序放在 arr1 的末尾，
+		// 因为i>j, x是排在y的后面，所以如果map中存在x则此时x与y需要交换顺序
 		if hasx || hasy {
 			return hasx
 		}
@@ -51,7 +51,11 @@ func RelativeSortArrayMethod2(arr1 []int, arr2 []int) []int {
 		}
 	}
 	// 记录arr1各个元素出现的频率, 数组的长度最大为arr1中的最大元素+1
+	// 索引是arr1 中的元素，值为 arr1 中的元素出现的次数
+	// 此时的索引其实就是arr1不在arr2元素的递增排序了
 	frequency := make([]int, upper+1)
+	//arr1 := []int{19, 2, 3, 1, 3, 2, 4, 6, 7, 9, 2}
+	//arr2 := []int{2, 1, 4, 3, 9, 6}
 	for _, v := range arr1 {
 		frequency[v] ++
 	}
@@ -61,6 +65,9 @@ func RelativeSortArrayMethod2(arr1 []int, arr2 []int) []int {
 			ans = append(ans, v)
 		}
 	}
+	// 处理arr1中不在arr2中的元素
+	// v：arr1元素
+	// freq：v出现的次数
 	for v, freq := range frequency {
 		for ; freq > 0; freq-- {
 			ans = append(ans, v)
