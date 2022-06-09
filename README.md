@@ -4,4 +4,4 @@
 ### 数组
 题目 | 难度 |  max.liu | jay.lee
 -- |--|--|-- 
-[两数之和](https://leetcode.cn/problems/two-sum/)| Easy| [go]() | [go]()
+[两数之和](https://leetcode.cn/problems/two-sum/)| Easy| [go]() | [go](/twoSum/jayLee.go)
