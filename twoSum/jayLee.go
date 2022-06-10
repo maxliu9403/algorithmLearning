@@ -1,3 +1,5 @@
+package twoSum
+
 func twoSum(nums []int, target int) []int {
 	h := map[int]int{}
 	for i := range nums {
