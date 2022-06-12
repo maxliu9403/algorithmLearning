@@ -4,9 +4,12 @@ package findMedianSortedArrays
 // 算法的时间复杂度应该为 O(log (m+n))
 func FindMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	totalLength := len(nums1) + len(nums2)
+	// 奇数情况
 	if totalLength%2 == 1 {
+		// 向下取整
 		midIndex := totalLength / 2
 		return float64(getKthElement(nums1, nums2, midIndex+1))
+		// 偶数情况
 	} else {
 		midIndex1, midIndex2 := totalLength/2-1, totalLength/2
 		return float64(getKthElement(nums1, nums2, midIndex1+1)+getKthElement(nums1, nums2, midIndex2+1)) / 2.0
@@ -16,6 +19,7 @@ func FindMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 func getKthElement(nums1, nums2 []int, k int) int {
 	index1, index2 := 0, 0
 	for {
+		// nums1为空，中位数=
 		if index1 == len(nums1) {
 			return nums2[index2+k-1]
 		}
