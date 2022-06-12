@@ -7,3 +7,5 @@
 [两数之和](https://leetcode.cn/problems/two-sum/)| Easy| [go]() | [go](/twoSum/jayLee.go)
 [寻找两个正序数组的中位数](https://leetcode.cn/problems/median-of-two-sorted-arrays/)| Hard| [go]() | [go](/findMedianSortedArrays/jayLee.go)
 [盛最多水的容器](https://leetcode.cn/problems/container-with-most-water/)| Medium| [go]() | [go](/maxArea/jayLee.go)
+[三数之和](https://leetcode.cn/problems/3sum/)| Medium| [go]() | [go](/threeSum/jayLee.go)
+[最接近的三数之和](https://leetcode.cn/problems/3sum-closest/)| Medium| [go]() | [go](/threeSumClosest/jayLee.go)
