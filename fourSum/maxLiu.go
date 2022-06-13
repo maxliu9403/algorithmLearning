@@ -10,7 +10,7 @@ import "sort"
 	nums[a] + nums[b] + nums[c] + nums[d] == target
 	你可以按 任意顺序 返回答案
 */
-func fourSum(nums []int, target int) [][]int {
+func FourSum(nums []int, target int) [][]int {
 	ans := make([][]int, 0)
 	if nums == nil || len(nums) < 4 {
 		return ans

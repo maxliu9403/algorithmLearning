@@ -9,4 +9,4 @@
 [盛最多水的容器](https://leetcode.cn/problems/container-with-most-water/)| 中等| [go](maxArea/maxLiu.go) | [go]()
 [三数之和](https://leetcode.cn/problems/3sum/)| 中等| [go](threeSum/maxLiu.go) | [go](/threeSum/jayLee.go)
 [最接近的三数之和](https://leetcode.cn/problems/3sum-closest/)| 中等| [go](threeSumClosest/maxLiu.go) | [go](/threeSumClosest/jayLee.go)
-[四数之和](https://leetcode.cn/problems/4sum/)| 中等| [go](fourSum/maxLiu.go) | [go]()
+[四数之和](https://leetcode.cn/problems/4sum/)| 中等| [go](fourSum/maxLiu.go) | [go](fourSum/jayLee.go)
