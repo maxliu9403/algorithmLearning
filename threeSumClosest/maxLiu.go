@@ -22,7 +22,7 @@ func ThreeSumClosest(nums []int, target int) int {
 			if sum == target {
 				return target
 			}
-			if abs(sum-target) < abs(ans-target) {
+			if absValue(sum-target) < absValue(ans-target) {
 				ans = sum
 			}
 			if sum > target {
@@ -42,7 +42,7 @@ func ThreeSumClosest(nums []int, target int) int {
 	return ans
 }
 
-func abs(x int) int {
+func absValue(x int) int {
 	if x < 0 {
 		return -1 * x
 	}
