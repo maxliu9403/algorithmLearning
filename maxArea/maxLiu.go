@@ -10,7 +10,7 @@ func MaxArea(height []int) int {
 	i, j := 0, len(height)-1
 	var ans int
 	for i < j {
-		area := min(height[i], height[j]) * (j - i)
+		area := minValue(height[i], height[j]) * (j - i)
 		ans = max(area, ans)
 		// 移动指针
 		// 若向内 移动短板 ，水槽的短板 min(h[i], h[j])min(h[i],h[j]) 可能变大，因此下个水槽的面积 可能增大 。
@@ -25,7 +25,7 @@ func MaxArea(height []int) int {
 	return ans
 }
 
-func min(x, y int) int {
+func minValue(x, y int) int {
 	if x < y {
 		return x
 	}
