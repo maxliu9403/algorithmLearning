@@ -15,3 +15,5 @@
 [四数之和](https://leetcode.cn/problems/4sum/)| 中等| [go](fourSum/maxLiu.go) | [go](fourSum/jayLee.go)
 [删除有序数组中的重复项](https://leetcode.cn/problems/remove-duplicates-from-sorted-array/)| 简单| [go](removeDuplicates/maxLiu.go)
 | [go](removeDuplicates/jayLee.go)
+[移除元素](https://leetcode.cn/problems/remove-element/)| 简单| [go]()
+| [go](removeElement/jayLee.go)
