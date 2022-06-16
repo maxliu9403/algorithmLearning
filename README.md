@@ -12,7 +12,6 @@
 [三数之和](https://leetcode.cn/problems/3sum/)| 中等| [go](threeSum/maxLiu.go) | [go](/threeSum/jayLee.go)
 [最接近的三数之和](https://leetcode.cn/problems/3sum-closest/)| 中等| [go](threeSumClosest/maxLiu.go) | [go](/threeSumClosest/jayLee.go)
 [四数之和](https://leetcode.cn/problems/4sum/)| 中等| [go](fourSum/maxLiu.go) | [go](fourSum/jayLee.go)
-<<<<<<< HEAD
 [删除有序数组中的重复项](https://leetcode.cn/problems/remove-duplicates-from-sorted-array/)| 简单| [go](removeDuplicates/maxLiu.go)
 | [go](removeDuplicates/jayLee.go)
 [移除元素](https://leetcode.cn/problems/remove-element/)| 简单| [go](removeElement/maxLiu.go)
