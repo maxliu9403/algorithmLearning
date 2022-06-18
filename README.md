@@ -21,3 +21,4 @@
 题目 | 难度 | max.liu | jay.lee
 -- |--|--|--
 [字母异位词分组](https://leetcode.cn/problems/group-anagrams/)| 中等| [go](/groupAnagrams/maxLiu.go) | [go](/groupAnagrams/jayLee.go)
+[合并区间](https://leetcode.cn/problems/merge-intervals/)| 中等| [go](/merge/maxLiu.go) | [go](/groupAnagrams/jayLee.go)
