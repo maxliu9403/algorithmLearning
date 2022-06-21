@@ -24,3 +24,4 @@
 [字母异位词分组](https://leetcode.cn/problems/group-anagrams/)| 中等| [go](/groupAnagrams/maxLiu.go) | [go](/groupAnagrams/jayLee.go)
 [合并区间](https://leetcode.cn/problems/merge-intervals/)| 中等| [go](/merge/maxLiu.go) | [go](/merge/jayLee.go)
 [颜色分类](https://leetcode.cn/problems/sort-colors/)| 中等| [go](/sortColors/maxLiu.go) | [go](/sortColors/jayLee.go)
+[合并两个有序数组](https://leetcode.cn/problems/merge-sorted-array/)| 简单| [go](/merge2/maxLiu.go) | [go](/merge2/jayLee.go)
