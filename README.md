@@ -27,3 +27,4 @@
 [合并两个有序数组](https://leetcode.cn/problems/merge-sorted-array/)| 简单| [go](/merge2/maxLiu.go) | [go](/merge2/jayLee.go)
 [多数元素](https://leetcode.cn/problems/majority-element/)| 简单| [go](/majorityElement/maxLiu.go) | [go](/majorityElement/jayLee.go)
 [对链表进行插入排序](https://leetcode.cn/problems/insertion-sort-list/)| 中等| [go](/insertionSortList/maxLiu.go) | [go](/insertionSortList/jayLee.go)
+[排序链表](https://leetcode.cn/problems/sort-list/)| 中等| [go](/sortList/maxLiu.go) | [go](/sortList/jayLee.go)
