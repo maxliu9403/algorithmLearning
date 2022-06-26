@@ -28,3 +28,5 @@
 [多数元素](https://leetcode.cn/problems/majority-element/)| 简单| [go](/majorityElement/maxLiu.go) | [go](/majorityElement/jayLee.go)
 [对链表进行插入排序](https://leetcode.cn/problems/insertion-sort-list/)| 中等| [go](/insertionSortList/maxLiu.go) | [go](/insertionSortList/jayLee.go)
 [排序链表](https://leetcode.cn/problems/sort-list/)| 中等| [go](/sortList/maxLiu.go) | [go](/sortList/jayLee.go)
+[最大间距](https://leetcode.cn/problems/maximum-gap/)| 困难| [go](/maximumGap/maxLiu.go) | [go](/maximumGap/jayLee.go)
+[最大数](https://leetcode.cn/problems/largest-number/)| 中等| [go](/largestNumber/maxLiu.go) | [go](/largestNumber/jayLee.go)
