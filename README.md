@@ -30,3 +30,6 @@
 [排序链表](https://leetcode.cn/problems/sort-list/)| 中等| [go](/sortList/maxLiu.go) | [go](/sortList/jayLee.go)
 [最大间距](https://leetcode.cn/problems/maximum-gap/)| 困难| [go](/maximumGap/maxLiu.go) | [go](/maximumGap/jayLee.go)
 [最大数](https://leetcode.cn/problems/largest-number/)| 中等| [go](/largestNumber/maxLiu.go) | [go](/largestNumber/jayLee.go)
+[数组中的第K个最大元素](https://leetcode.cn/problems/kth-largest-element-in-an-array/)| 中等| [go](/findKthLargest/maxLiu.go) | [go](/findKthLargest/jayLee.go)
+[存在重复元素](https://leetcode.cn/problems/contains-duplicate/)| 简单| [go](/containsDuplicate/maxLiu.go) | [go](/containsDuplicate/jayLee.go)
+[存在重复元素 III](https://leetcode.cn/problems/contains-duplicate-iii/)| 中等| [go](/containsNearbyAlmostDuplicate/maxLiu.go) | [go](/containsNearbyAlmostDuplicate/jayLee.go)
