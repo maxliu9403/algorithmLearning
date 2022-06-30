@@ -1,7 +1,6 @@
 package findKthLargest
 
 import (
-	"fmt"
 	"math/rand"
 	"time"
 )
@@ -51,9 +50,7 @@ func quickSearch(A []int, p, r int) {
 // 采用随机抽样。等概率的从r-p+1个元素中选取一个作为主元。
 func randomPartition(A []int, p, r int) int {
 	i := rand.Int()%(r-p+1) + p // RANDOM(p, r)的golang实现
-	fmt.Println(p, r, "===", i)
 	A[i], A[r] = A[r], A[i]
-	fmt.Println(A)
 	return partition(A, p, r)
 }
 
