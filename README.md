@@ -33,3 +33,5 @@
 [数组中的第K个最大元素](https://leetcode.cn/problems/kth-largest-element-in-an-array/)| 中等| [go](/findKthLargest/maxLiu.go) | [go](/findKthLargest/jayLee.go)
 [存在重复元素](https://leetcode.cn/problems/contains-duplicate/)| 简单| [go](/containsDuplicate/maxLiu.go) | [go](/containsDuplicate/jayLee.go)
 [存在重复元素 III](https://leetcode.cn/problems/contains-duplicate-iii/)| 中等| [go](/containsNearbyAlmostDuplicate/maxLiu.go) | [go](/containsNearbyAlmostDuplicate/jayLee.go)
+[多数元素 II](https://leetcode.cn/problems/majority-element-ii/)| 中等| [go](/majorityElement2/maxLiu.go) | [go](/majorityElement2/jayLee.go)
+[有效的字母异位词](https://leetcode.cn/problems/valid-anagram/)| 简单| [go](/isAnagram/maxLiu.go) | [go](/isAnagram/jayLee.go)
