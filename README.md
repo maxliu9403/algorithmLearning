@@ -35,3 +35,4 @@
 [存在重复元素 III](https://leetcode.cn/problems/contains-duplicate-iii/)| 中等| [go](/containsNearbyAlmostDuplicate/maxLiu.go) | [go](/containsNearbyAlmostDuplicate/jayLee.go)
 [多数元素 II](https://leetcode.cn/problems/majority-element-ii/)| 中等| [go](/majorityElement2/maxLiu.go) | [go](/majorityElement2/jayLee.go)
 [有效的字母异位词](https://leetcode.cn/problems/valid-anagram/)| 简单| [go](/isAnagram/maxLiu.go) | [go](/isAnagram/jayLee.go)
+[会议室](https://leetcode.cn/problems/meeting-rooms/)| 简单| [go](/canAttendMeetings/maxLiu.go) | [go](/canAttendMeetings/jayLee.go)
