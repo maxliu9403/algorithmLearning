@@ -1,5 +1,24 @@
 package majorityElement
 
+// majorityElementBoyerMoore 摩尔选举法。相似题目：majorityElement2.MajorityElement
+// nums:       [7, 7, 5, 7, 5, 1 | 5, 7 | 5, 5, 7, 7 | 7, 7, 7, 7]
+// candidate:  [7, 7, 7, 7, 7, 7,  5, 5,  5, 5, 5, 5,  7, 7, 7, 7]
+// count:      [1, 2, 1, 2, 1, 0,  1, 0,  1, 2, 1, 0,  1, 2, 3, 4]
+func majorityElementBoyerMoore(nums []int) int {
+	candidate, count := 0, 0
+	for _, num := range nums {
+		if count == 0 {
+			candidate = num
+			count++
+		} else if count > 0 && candidate != num {
+			count--
+		} else if count > 0 && candidate == num {
+			count++
+		}
+	}
+	return candidate
+}
+
 // 找出第一个超过 nums.length / 2 的数字
 func majorityElementHashTable(nums []int) int {
 	h := map[int]int{} // 由于用到了hash table所以空间复杂度最大为O(n)
