@@ -1,16 +1,11 @@
 package insertionSortList
 
-type ListNodeMax struct {
-	Val  int
-	Next *ListNodeMax
-}
-
-func insertionSortListMax(head *ListNodeMax) *ListNodeMax {
-	dummyHead := &ListNodeMax{Val: 0}
+func insertionSortListMax(head *ListNode) *ListNode {
+	dummyHead := &ListNode{Val: 0}
 	dummyHead.Next = head
 	cur := head
-	var prev *ListNodeMax
-	var temp *ListNodeMax
+	var prev *ListNode
+	var temp *ListNode
 
 	for cur != nil && cur.Next != nil { // cur指针扫整个链表
 		if cur.Val <= cur.Next.Val { // 符合递增，继续推进
