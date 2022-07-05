@@ -1,27 +1,29 @@
-package containsDuplicate
+package containsNearbyAlmostDuplicate
 
 import (
 	"math/rand"
 	"time"
 )
 
-// 复杂度：O(nlogn)
-/*
-	思路：排序后判断相邻元素是否相等
-	随机数 + 快排 + 双指针
-*/
-func containsDuplicateMaxLiu(nums []int) bool {
+func ContainsNearbyAlmostDuplicate(nums []int, k int, t int) bool {
 	rand.Seed(time.Now().UnixNano())
 	QuickSort(nums, 0, len(nums)-1)
-	left, right := 0, 1
-	for right <= len(nums)-1 {
-		if nums[left] == nums[right] {
+	j, i := 0, 1
+	for i <= len(nums)-1 {
+		if absFunc(i, j) <= k && absFunc(nums[i], nums[j]) <= t {
 			return true
 		}
-		left++
-		right++
+		i++
+		j++
 	}
 	return false
+}
+
+func absFunc(i, j int) int {
+	if i-j < 0 {
+		return j - i
+	}
+	return i - j
 }
 
 func partition(nums []int, left, right int) int {
