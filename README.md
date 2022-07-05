@@ -37,3 +37,4 @@
 [有效的字母异位词](https://leetcode.cn/problems/valid-anagram/)| 简单| [go](/isAnagram/maxLiu.go) | [go](/isAnagram/jayLee.go)
 [会议室](https://leetcode.cn/problems/meeting-rooms/)| 简单| [go](/canAttendMeetings/maxLiu.go) | [go](/canAttendMeetings/jayLee.go)
 [会议室 II](https://leetcode.cn/problems/meeting-rooms-ii/)| 中等| [go](/minMeetingRooms/maxLiu.go) | [go](/minMeetingRooms/jayLee.go)
+[丢失的数字](https://leetcode.cn/problems/missing-number/)| 简单| [go](/missingNumber/maxLiu.go) | [go](/missingNumber/jayLee.go)
