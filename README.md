@@ -39,3 +39,4 @@
 [会议室](https://leetcode.cn/problems/meeting-rooms/)| 简单| [go](/canAttendMeetings/maxLiu.go) | [go](/canAttendMeetings/jayLee.go)
 [会议室 II](https://leetcode.cn/problems/meeting-rooms-ii/)| 中等| [go](/minMeetingRooms/maxLiu.go) | [go](/minMeetingRooms/jayLee.go)
 [丢失的数字](https://leetcode.cn/problems/missing-number/)| 简单| [go](/missingNumber/maxLiu.go) | [go](/missingNumber/jayLee.go)
+[H 指数](https://leetcode.cn/problems/h-index/)| 中等| [go](/hIndex/maxLiu.go) | [go](/hIndex/jayLee.go)
