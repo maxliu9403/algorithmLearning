@@ -6,6 +6,6 @@ import (
 )
 
 func TestMissingNumber(t *testing.T) {
-	v := missingNumberXor([]int{3, 0, 1})
+	v := XorMissingNumber([]int{3, 0, 1})
 	fmt.Println(v)
 }
