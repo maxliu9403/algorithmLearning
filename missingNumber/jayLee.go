@@ -16,13 +16,15 @@ func missingNumber(nums []int) int {
 	return len(nums)
 }
 
+// XorMissingNumber
 /*
 Thinking:
 	1. 异或:n^n=0, n^0=n
 	2. 将数组扩充为:[0..len(nums)] + nums, 这样就确保nums内的所有元素都能被抵消为0,
 	   最终会得到0^missingNumber = missingNumber
+Association: singleNumber.XorSingleNumber
 */
-func missingNumberXor(nums []int) int {
+func XorMissingNumber(nums []int) int {
 	var xor int
 	for i, num := range nums {
 		// 这是一种缩略的写法，使省略了生成[0..len(nums)-1]数组的时间和空间
