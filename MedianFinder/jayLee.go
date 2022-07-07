@@ -12,7 +12,7 @@ import (
 */
 type MedianFinder struct {
 	A minHp // A: 最小堆，记录大于中位数的所有元素
-	B maxHp // B: 最大堆，记录小于等于中位数的所有元素，父节点为中位数
+	B maxHp // B: 最大堆，记录小于等于中位数的所有元素，堆顶为中位数
 }
 
 func Constructor() MedianFinder {
