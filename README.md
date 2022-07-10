@@ -41,4 +41,7 @@
 [丢失的数字](https://leetcode.cn/problems/missing-number/)| 简单| [go](/missingNumber/maxLiu.go) | [go](/missingNumber/jayLee.go)
 [H 指数](https://leetcode.cn/problems/h-index/)| 中等| [go](/hIndex/maxLiu.go) | [go](/hIndex/jayLee.go)
 [数据流的中位数](https://leetcode.cn/problems/find-median-from-data-stream/)| 困难| [go](/MedianFinder/maxLiu.go) | [go](/MedianFinder/jayLee.go)
-[H 指数2](https://leetcode.cn/problems/h-index-ii/)| 中等| [go](/hIndex2/maxLiu.go) | [go](/hIndex2/jayLee.go)
+[H 指数 II](https://leetcode.cn/problems/h-index-ii/)| 中等| [go](/hIndex2/maxLiu.go) | [go](/hIndex2/jayLee.go)
+[摆动排序 II] (https://leetcode.cn/problems/wiggle-sort-ii/)| 中等| [go](/wiggleSort/maxLiu.go) | [go](/wiggleSort/jayLee.go)
+[前K个高频元素] (https://leetcode.cn/problems/top-k-frequent-elements/)| 中等| [go](/topKFrequent/maxLiu.go) | [go](/topKFrequent/jayLee.go)
+[两个数组的交集] (https://leetcode.cn/problems/intersection-of-two-arrays/)| 简单| [go](/intersection/maxLiu.go) | [go](/intersection/jayLee.go)
