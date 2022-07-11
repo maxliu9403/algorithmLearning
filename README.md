@@ -44,3 +44,4 @@
 [摆动排序 II](https://leetcode.cn/problems/wiggle-sort-ii/)| 中等| [go](/wiggleSort/maxLiu.go) | [go](/wiggleSort/jayLee.go)
 [前 K 个高频元素](https://leetcode.cn/problems/top-k-frequent-elements/)| 中等| [go](/topKFrequent/maxLiu.go) | [go](/topKFrequent/jayLee.go)
 [两个数组的交集](https://leetcode.cn/problems/intersection-of-two-arrays/)| 简单| [go](/intersection/maxLiu.go) | [go](/intersection/jayLee.go)
+[两个数组的交集 II](https://leetcode.cn/problems/intersection-of-two-arrays-ii/)| 简单| [go](/intersect/maxLiu.go) | [go](/intersect/jayLee.go)
