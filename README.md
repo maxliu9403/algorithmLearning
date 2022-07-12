@@ -45,3 +45,11 @@
 [摆动排序 II](https://leetcode.cn/problems/wiggle-sort-ii/)| 中等| [go](/wiggleSort/maxLiu.go) | [go](/wiggleSort/jayLee.go)
 [前K个高频元素](https://leetcode.cn/problems/top-k-frequent-elements/)| 中等| [go](/topKFrequent/maxLiu.go) | [go](/topKFrequent/jayLee.go)
 [两个数组的交集](https://leetcode.cn/problems/intersection-of-two-arrays/)| 简单| [go](/intersection/maxLiu.go) | [go](/intersection/jayLee.go)
+[两个数组的交集 II](https://leetcode.cn/problems/intersection-of-two-arrays-ii/)| 简单| [go](/intersect/maxLiu.go) | [go](/intersect/jayLee.go)
+[最大整除子集](https://leetcode.cn/problems/largest-divisible-subset/)| 中等| [go](/largestDivisibleSubset/maxLiu.go) | [go](/largestDivisibleSubset/jayLee.go)
+
+### 动态规划
+
+题目 | 难度 | max.liu | jay.lee
+-- |--|--|--
+[最长连续递增序列](https://leetcode.cn/problems/longest-continuous-increasing-subsequence/)| 简单| [go](/findLengthOfLCIS/maxLiu.go) | [go](/findLengthOfLCIS/jayLee.go)
