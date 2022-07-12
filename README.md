@@ -52,4 +52,3 @@
 题目 | 难度 | max.liu | jay.lee
 -- |--|--|--
 [最长连续递增序列](https://leetcode.cn/problems/longest-continuous-increasing-subsequence/)| 简单| [go](/findLengthOfLCIS/maxLiu.go) | [go](/findLengthOfLCIS/jayLee.go)
-
