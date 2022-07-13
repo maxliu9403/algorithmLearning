@@ -53,3 +53,5 @@
 题目 | 难度 | max.liu | jay.lee
 -- |--|--|--
 [最长连续递增序列](https://leetcode.cn/problems/longest-continuous-increasing-subsequence/)| 简单| [go](/findLengthOfLCIS/maxLiu.go) | [go](/findLengthOfLCIS/jayLee.go)
+[最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/)| 中等| [go](/lengthOfLIS/maxLiu.go) | [go](/findLengthOfLCIS/jayLee.go)
+[递增的三元子序列](https://leetcode.cn/problems/increasing-triplet-subsequence/)| 中等| [go](/increasingTriplet/maxLiu.go) | [go](/findLengthOfLCIS/jayLee.go)
