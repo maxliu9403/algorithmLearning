@@ -53,3 +53,12 @@
 -- |--|--|--
 [最长连续递增序列](https://leetcode.cn/problems/longest-continuous-increasing-subsequence/)| 简单| [go](/findLengthOfLCIS/maxLiu.go) | [go](/findLengthOfLCIS/jayLee.go)
 [最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)| 中等| [go](/longestPalindrome/maxLiu.go) | [go](/longestPalindrome/jayLee.go)
+[正则表达式匹配](https://leetcode.cn/problems/regular-expression-matching/)| 困难| [go](/isMatch/maxLiu.go) | [go](/isMatch/jayLee.go)
+
+### 链表
+
+题目 | 难度 | max.liu | jay.lee
+-- |--|--|--
+[两数相加](https://leetcode.cn/problems/add-two-numbers/)| 中等| [go](/addTwoNumbers/maxLiu.go) | [go](/addTwoNumbers/jayLee.go)
+[删除链表的倒数第 N 个结点](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/)| 中等| [go](/removeNthFromEnd/maxLiu.go) | [go](/removeNthFromEnd/jayLee.go)
+[合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/)| 简单| [go](/mergeTwoLists/maxLiu.go) | [go](/mergeTwoLists/jayLee.go)
