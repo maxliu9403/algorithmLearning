@@ -54,6 +54,8 @@
 [最长连续递增序列](https://leetcode.cn/problems/longest-continuous-increasing-subsequence/)| 简单| [go](/findLengthOfLCIS/maxLiu.go) | [go](/findLengthOfLCIS/jayLee.go)
 [最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)| 中等| [go](/longestPalindrome/maxLiu.go) | [go](/longestPalindrome/jayLee.go)
 [正则表达式匹配](https://leetcode.cn/problems/regular-expression-matching/)| 困难| [go](/isMatch/maxLiu.go) | [go](/isMatch/jayLee.go)
+[最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/)| 中等| [go](/lengthOfLIS/maxLiu.go) | [go](/findLengthOfLCIS/jayLee.go)
+[递增的三元子序列](https://leetcode.cn/problems/increasing-triplet-subsequence/)| 中等| [go](/increasingTriplet/maxLiu.go) | [go](/findLengthOfLCIS/jayLee.go)
 
 ### 链表
 
