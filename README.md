@@ -68,3 +68,4 @@
 [两两交换链表中的节点](https://leetcode.cn/problems/swap-nodes-in-pairs/)| 中等| [go](/swapPairs/maxLiu.go) | [go](/swapPairs/jayLee.go)
 [k个一组翻转链表](https://leetcode.cn/problems/reverse-nodes-in-k-group/)| 中等| [go](/reverseKGroup/maxLiu.go) | [go](/reverseKGroup/jayLee.go)
 [反转链表](https://leetcode.cn/problems/reverse-linked-list/)| 简单| [go](/reverseList/maxLiu.go) | [go](/reverseList/jayLee.go)
+[旋转链表](https://leetcode.cn/problems/rotate-list/)| 中等| [go](/rotateRight/maxLiu.go) | [go](/rotateRight/jayLee.go)
