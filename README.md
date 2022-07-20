@@ -65,3 +65,4 @@
 [删除链表的倒数第 N 个结点](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/)| 中等| [go](/removeNthFromEnd/maxLiu.go) | [go](/removeNthFromEnd/jayLee.go)
 [合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/)| 简单| [go](/mergeTwoLists/maxLiu.go) | [go](/mergeTwoLists/jayLee.go)
 [合并K个升序链表](https://leetcode.cn/problems/merge-k-sorted-lists/)| 困难| [go](/mergeKLists/maxLiu.go) | [go](/mergeKLists/jayLee.go)
+[两两交换链表中的节点](https://leetcode.cn/problems/swap-nodes-in-pairs/)| 中等| [go](/swapPairs/maxLiu.go) | [go](/swapPairs/jayLee.go)
