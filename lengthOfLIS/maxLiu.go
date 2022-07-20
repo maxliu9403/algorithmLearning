@@ -13,19 +13,19 @@ func lengthOfLIS(nums []int) int {
 	// dp[i] 表示以nums[i]结尾的最长递增子序列
 	dp := make([]int, len(nums))
 	// 初始化dp数组
-	for i:=0; i <len(nums); i ++ {
-		dp[i]= 1
+	for i := 0; i < len(nums); i++ {
+		dp[i] = 1
 	}
 	// 计算dp[i]，只需要
-	for i := 0; i<len(nums); i ++ {
-		for j :=0; j<i;j++ {
+	for i := 0; i < len(nums); i++ {
+		for j := 0; j < i; j++ {
 			if nums[i] > nums[j] {
 				dp[i] = max(dp[i], dp[j]+1)
 			}
 		}
 	}
 	ans := 0
-	for i:=0; i<len(nums); i++ {
+	for i := 0; i < len(dp); i++ {
 		ans = max(ans, dp[i])
 	}
 	return ans
