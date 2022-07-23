@@ -69,3 +69,5 @@
 [k个一组翻转链表](https://leetcode.cn/problems/reverse-nodes-in-k-group/)| 中等| [go](/reverseKGroup/maxLiu.go) | [go](/reverseKGroup/jayLee.go)
 [反转链表](https://leetcode.cn/problems/reverse-linked-list/)| 简单| [go](/reverseList/maxLiu.go) | [go](/reverseList/jayLee.go)
 [旋转链表](https://leetcode.cn/problems/rotate-list/)| 中等| [go](/rotateRight/maxLiu.go) | [go](/rotateRight/jayLee.go)
+[删除排序链表中的重复元素](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/)| 简单| [go](/deleteDuplicates/maxLiu.go) | [go](/deleteDuplicates/jayLee.go)
+[删除排序链表中的重复元素 II](https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii/)| 中等| [go](/deleteDuplicatesII/maxLiu.go) | [go](/deleteDuplicatesII/jayLee.go)
