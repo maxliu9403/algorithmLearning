@@ -8,47 +8,65 @@ type ListNode struct {
 /**
  * 给你单链表的头指针 head 和两个整数 left 和 right ，其中 left <= right 。请你反转从位置 left 到位置 right 的链表节点，返回 反转后的链表。
  */
-func reverseLinkedList(head *ListNode) {
-	var pre *ListNode
-	cur := head
-	for cur != nil {
-		next := cur.Next
-		cur.Next = pre
-		pre = cur
-		cur = next
-	}
-}
-
+// 迭代法
 func reverseBetween(head *ListNode, left, right int) *ListNode {
+	// dummyHead = [null,1,2,3,4,5], left = 2, right = 4
 	// 因为头节点有可能发生变化，使用虚拟头节点可以避免复杂的分类讨论
-	dummyNode := &ListNode{Val: -1, Next: head}
-
-	pre := dummyNode
-	// 第 1 步：从虚拟头节点走 left - 1 步，来到 left 节点的前一个节点
-	// 建议写在 for 循环里，语义清晰
+	dummyHead := &ListNode{Next: head}
+	// 第 1 步：截取链表
+	pre := dummyHead // pre = left 前一个节点
 	for i := 0; i < left-1; i++ {
 		pre = pre.Next
 	}
-
-	// 第 2 步：从 pre 再走 right - left + 1 步，来到 right 节点
-	rightNode := pre
+	leftNode := pre.Next // leftNode = left节点
+	rightNode := pre     // rightNode = right 节点
 	for i := 0; i < right-left+1; i++ {
 		rightNode = rightNode.Next
 	}
-
-	// 第 3 步：切断出一个子链表（截取链表）
-	leftNode := pre.Next // 截取：[left, right]
-	curr := rightNode.Next
-
-	// 注意：切断链接
+	nxt := rightNode.Next
 	pre.Next = nil
 	rightNode.Next = nil
-
-	// 第 4 步：同第 206 题，反转链表的子区间
-	reverseLinkedList(leftNode)
-
-	// 第 5 步：接回到原来的链表中
+	// 第 2 步：反转链表的子区间
+	reverse(leftNode) // 2 <- 3 <- 4
+	// 第 3 步：接回到原来的链表中 1 -> (4 -> 3 -> 2) -> 5
 	pre.Next = rightNode
-	leftNode.Next = curr
-	return dummyNode.Next
+	leftNode.Next = nxt
+	return dummyHead.Next
+}
+
+func reverse(head *ListNode) {
+	// 记录上一位
+	var pre *ListNode
+	cur := head
+	for cur != nil {
+		nxt := cur.Next
+		cur.Next = pre
+		pre = cur
+		cur = nxt
+	}
+}
+
+// 递归法
+func reverseBetweenWithRecursion(head *ListNode, left, right int) *ListNode {
+	if left == 1 {
+		return reverseNWithRecursion(head, right) // 反转前N个元素
+	}
+	// head依次右移，目标left和right也就相对应的依次减去1，知道left为1时。问题转化为：反转前N个元素。
+	head.Next = reverseBetweenWithRecursion(head.Next, left-1, right-1) // 定义：反转head.Next中[left-1...right-1]元素
+	return head
+}
+
+// 递归法反转前N个元素
+var suc *ListNode // 后置节点
+func reverseNWithRecursion(head *ListNode, n int) *ListNode {
+	// 1 -> reverse(2 -> 3 -> 4) -> 5
+	if n == 1 {
+		suc = head.Next // 记录第 n + 1 个节点
+		return head
+	}
+	lst := reverseNWithRecursion(head.Next, n-1) // 定义：反转head.Next中前n-1个元素
+	// 1 -> 2 <- 3 <- 4 -> 5
+	head.Next.Next = head // 1 <- 2 <- 3 <- 4
+	head.Next = suc       // 5 <- 1 <- 2 <- 3 <- 4
+	return lst
 }
