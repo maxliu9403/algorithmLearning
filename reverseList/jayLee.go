@@ -21,3 +21,19 @@ func reverseList(head *ListNode) *ListNode {
 	}
 	return prev
 }
+
+func reverseListWithRecursion(head *ListNode) *ListNode {
+	// base-case
+	if head.Next == nil {
+		return head
+	}
+	// head: 1 -> reverse(2 -> 3 -> 4 -> 5 -> null)
+	// 结果: last: null <- 2 <- 3 <- 4 <- 5
+	// 		head: 1 -> 2 -> null
+	last := reverseListWithRecursion(head.Next) // reverse的定义：输入一个节点head，将「 以head为起点 」的链表反转，并返回反转之后的头结点。
+	// head: 1 <- 2 <- 3 <- 4 <- 5
+	// head: 1 -> 2
+	head.Next.Next = head
+	head.Next = nil
+	return last
+}
