@@ -1,8 +1,8 @@
 package addTwoNumbers
 
-func addTwoNumbersMax(l1, l2 *ListNode) (head *ListNode) {
-	var tail *ListNode
-	// 记录进位
+func addTwoNumbersMax(l1, l2 *ListNode) *ListNode {
+	dummy := &ListNode{}
+	sumNode := dummy
 	carry := 0
 	for l1 != nil || l2 != nil {
 		n1, n2 := 0, 0
@@ -18,17 +18,12 @@ func addTwoNumbersMax(l1, l2 *ListNode) (head *ListNode) {
 		sum := n1 + n2 + carry
 		// 计算进位
 		sum, carry = sum%10, sum/10
-		if head == nil {
-			head = &ListNode{Val: sum}
-			tail = head
-		} else {
-			tail.Next = &ListNode{Val: sum}
-			tail = tail.Next
-		}
+		sumNode.Next = &ListNode{Val: sum}
+		sumNode = sumNode.Next
 	}
-	// 判断最后是否还需进位
+	// 判断最后一位是否需要进位
 	if carry > 0 {
-		tail.Next = &ListNode{Val: carry}
+		sumNode.Next = &ListNode{Val: carry}
 	}
-	return
+	return dummy.Next
 }
