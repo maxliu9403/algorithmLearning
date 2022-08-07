@@ -1,6 +1,8 @@
 package threeSum
 
-import "sort"
+import (
+	"sort"
+)
 
 func ThreeSum(nums []int) [][]int {
 	ans := make([][]int, 0)
@@ -55,3 +57,64 @@ func ThreeSum(nums []int) [][]int {
 // 复杂度分析
 // 时间复杂度：O(n^2) 数组排序O(NlogN)，遍历数组O(n)，双指针遍历O(n) 总体:O(NlogN) + O(n)*O(n)
 // 空间复杂度：O(1)
+
+func SumMe(nums []int) [][]int {
+	return nSumTarget(nums, 4, 0, -6401)
+}
+
+// n数字之和
+// n:几数之和
+// start:枚举
+// target:目标值
+func nSumTarget(nums []int, n int, start, target int) [][]int {
+	res := make([][]int, 0)
+	sort.Slice(nums, func(i, j int) bool {
+		return nums[i] < nums[j]
+	})
+	// 至少是两数之后，同时数组长度必须大于计算数字之和的元素个数
+	sz := len(nums)
+	if n < 2 || sz < n {
+		return res
+	}
+	// base case
+	if n == 2 {
+		lo := start
+		hi := sz - 1
+		for lo < hi {
+			sum := nums[lo] + nums[hi]
+			left, right := nums[lo], nums[hi]
+			if sum < target {
+				// 过滤重复元素
+				for lo < hi && nums[lo] == left {
+					lo++
+				}
+			} else if sum > target {
+				// 过滤重复元素
+				for lo < hi && nums[hi] == right {
+					hi--
+				}
+			} else {
+				res = append(res, []int{left, right})
+				for lo < hi && nums[lo] == left {
+					lo++
+				}
+				for lo < hi && nums[hi] == right {
+					hi--
+				}
+			}
+		}
+	} else {
+		// n>2时递归计算
+		for i := start; i < sz; i++ {
+			sub := nSumTarget(nums, n-1, i+1, target-nums[i])
+			for _, arr := range sub {
+				arr = append(arr, nums[i])
+				res = append(res, arr)
+			}
+			for i < sz-1 && nums[i] == nums[i+1] {
+				i++
+			}
+		}
+	}
+	return res
+}

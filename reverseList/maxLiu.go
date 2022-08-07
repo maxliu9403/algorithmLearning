@@ -1,11 +1,6 @@
 package reverseList
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
-func reverseList(head *ListNode) *ListNode {
+func reverseLists(head *ListNode) *ListNode {
 	// prev在前，curr在后
 	var prev *ListNode
 	curr := head
