@@ -30,7 +30,7 @@ func getCount(head *ListNode) int {
 }
 
 func getIntersectionNodeMethod(headA, headB *ListNode) *ListNode {
-	if headA == nil || headB == nil {
+	if headA == nil || headB == nil  {
 		return nil
 	}
 	// 计算两个链表的长度
